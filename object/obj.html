@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+  let year=2000;
+  let Obox=document.getElementsByClassName('box')[0];
+  let html='';
+  for(let i=0;i<1000;i++){
+    html+='<div>'+(++year)+'</div>'
+  }
+  Obox.innerHTML=html;
+
+</script>
