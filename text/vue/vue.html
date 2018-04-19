@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+    #app{text-align: center;}
+    li{height: 50px;border: 1px solid #000}
+  </style>
+</head>
+<body>
+  <div id="app">
+    <p>{{ a }}</p>
+    <ul>
+      <li v-on:click="sayhello">{{ b }}</li>
+      <li><a href="" v-bind:c="c">{{ c }}</a></li>
+    </ul>
+    <input v-model="value" type="" name="">
+    <p v-text="value"></p>
+    <div v-html="html"></div>
+  </div>
+
+    <!-- <div id="app">
+    <h1>{{title}}</h1>
+    <input v-model="name">
+    <h2>{{name}}</h2>
+    <h3>count: <span>{{count}}</span></h3>
+    <button v-on:click="clickMe">clickMe</button> -->
+</div>
+</body>
+</html>
+<script type="text/javascript" src="vue_test.js"></script>
+<script type="text/javascript">
+  let app=new Vue({
+    el:'#app',
+    data:{
+      a:10,
+      b:20,
+      c:30,
+      value:'hello',
+      html:'<p v-text="c"></p>'
+    },
+    methods:{
+      sayhello(){
+        alert(this.b)
+      }
+    },
+    mouted(){
+      console.log(this.value)
+    }
+  })
+  setTimeout(function(){
+    app.c=20;
+  },2000)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
